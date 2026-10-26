@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible problem with Simple Calendar.
+body:
+  - type: markdown
+    attributes:
+      value: "Use fictional examples. Do not upload private calendars, databases or backups. English and Spanish reports are welcome."
+  - type: input
+    id: version
+    attributes:
+      label: Application version and build
+      placeholder: 1.0.0-beta.1+1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windows version and interface language
+      placeholder: Windows 11 x64, English
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Describe a minimal example using fictional tasks.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include error text or redacted screenshots if useful.
+    validations:
+      required: true
