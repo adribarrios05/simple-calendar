@@ -1,0 +1,75 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Personal editor settings are archived under private/local-config.
+# Keep regenerated/restored local settings excluded as well.
+/.vscode/
+/devtools_options.yaml
+
+# Owner-only planning, verification logs, audits and local configuration.
+/private/
+# Prevent accidental publication if old local document paths are restored.
+/CURRENT.md
+/BETA_SCOPE.md
+/PRODUCT_ROADMAP_AND_RELEASE_PLAN.md
+
+# Local credentials/databases are not source fixtures.
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+/dist/
+/artifacts/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Publish maintained translations only; local audits now live in private/docs.
+/docs/*
+!/docs/i18n/
+!/docs/screenshots/
+
+/artifacts/
