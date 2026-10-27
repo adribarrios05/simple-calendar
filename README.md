@@ -6,7 +6,9 @@ A local Windows personal calendar combining fixed activities, automatic flexible
 
 Original project code and documentation use the [MIT License](LICENSE.md). Third-party components retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md). Packaging includes both documents and exports the build's Flutter notices as readable THIRD_PARTY_NOTICES.txt. The separate icon-font notice is included as `licenses/MaterialIcons.txt`.
 
-**Release status:** preparing **1.0.0-beta.1** for Windows x64. It has not been published and no public download is linked yet. Validate the final ZIP on clean Windows and check backup/update compatibility before distributing it.
+**Release status:** **1.0.0-beta.1** (build 1) is available as a public beta for Windows x64.
+
+[Download Windows x64 ZIP](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip) · [SHA256 checksum](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip.sha256) · [Release notes](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1)
 
 ## Preview
 
@@ -20,11 +22,11 @@ These captures come from the Windows integration test using an isolated temporar
 
 The first beta covers local calendars, fixed/flexible/manual scheduling, recurring tasks, tags, completion and subtasks, English/Spanish, and JSON backup/restore. It does not include notifications, cross-day rescheduling, deadlines, task splitting, multiple availability intervals, synchronization or other operating systems.
 
-The ZIP is unsigned and has no installer or automatic updater. Windows may show an unknown-publisher warning. Data is not encrypted. Clean-machine installation and distribution-to-distribution update checks remain required before publishing. Optional future features do not block this beta.
+The ZIP is unsigned and has no installer or automatic updater. Windows may show an unknown-publisher warning. Data is not encrypted. Export a backup before updating. Optional future features are outside this beta's scope.
 
 ## Support and feedback
 
-Once this repository is public, use its **Issues** tab for bugs and suggestions; it is the intended support channel, with no guaranteed response time. Include `1.0.0-beta.1` (build `1`), Windows version, steps to reproduce, and expected/actual behavior. Use fictional task names and redact screenshots. Do not upload your database, personal calendar or real backup. See [contributing](CONTRIBUTING.md).
+Use [Issues](https://github.com/adribarrios05/simple-calendar/issues) for bugs and suggestions; it is the intended support channel, with no guaranteed response time. Include `1.0.0-beta.1` (build `1`), Windows version, steps to reproduce, and expected/actual behavior. Use fictional task names and redact screenshots. Do not upload your database, personal calendar or real backup. See [contributing](CONTRIBUTING.md).
 
 ## Languages
 
@@ -34,11 +36,12 @@ Language changes translate controls, dialogs and scheduling/storage messages. Ta
 
 ## Install and run
 
-1. Extract the **entire** release ZIP into a permanent folder.
-2. Open `SimpleCalendar.exe`. Keep its DLLs and `data` directory together.
-3. Optionally create a shortcut to the executable.
+1. Download the [Windows x64 ZIP](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip).
+2. Extract the **entire** ZIP into a permanent folder.
+3. Open `SimpleCalendar.exe`. Keep its DLLs and `data` directory together.
+4. Optionally create a shortcut to the executable.
 
-Intended target: Windows 10/11 x64. The packaging script includes the Visual C++ runtime beside the app. A complete distribution is intended to require neither Flutter/Visual Studio nor administrator permissions. A clean-machine ZIP test remains a release gate; a development-machine build does not prove it.
+Intended target: Windows 10/11 x64. The packaging script includes the Visual C++ runtime beside the app. A complete distribution is intended to require neither Flutter/Visual Studio nor administrator permissions. Validate future releases on supported Windows without developer tools; a development-machine build alone does not prove clean-machine compatibility.
 
 The executable is currently unsigned. No MSI/MSIX installer or automatic updater exists. The binary distribution is portable, but its database lives in the user's application-support directory, **not beside the executable**.
 
@@ -57,7 +60,7 @@ Automatic suggestions start on five-minute boundaries, preserve valid placements
 
 **Remove activity** asks for confirmation and permanently removes the activity from the calendar from today, including today. Removed dates disappear from timelines and skipped lists and cannot be reactivated by editing, assigning a time or toggling Skip. Earlier dates remain accessible. Original execution records, assignments, locks and progress are retained in backups without being rewritten as skipped. Previous archived removals are converted automatically on upgrade. This is distinct from **Skip this occurrence**, which remains reversible.
 
-**Weekly scope:** new editor activities default to Weekly. Select **Every week** for an ongoing routine or **This week only** to stop on the Sunday of the start date's Monday?Sunday week. The Repeat field controls the day pattern (daily, weekdays, weekly or selected weekdays); Once is still available for a single date. Changing the start date moves the one-week limit with it. Existing saved/protected history is preserved when editing definitions.
+**Weekly scope:** new editor activities default to Weekly. Select **Every week** for an ongoing routine or **This week only** to stop on the Sunday of the start date's Monday–Sunday week. The Repeat field controls the day pattern (daily, weekdays, weekly or selected weekdays); Once is still available for a single date. Changing the start date moves the one-week limit with it. Existing saved/protected history is preserved when editing definitions.
 
 Identical subtask names preserve checks by order of appearance. Supported dates: January 1, 2000 through December 31, 2100. Blocks cannot cross midnight.
 
@@ -154,6 +157,6 @@ To verify a downloaded ZIP, compare the hash below with the first field in its `
 Get-FileHash .\SimpleCalendar-1.0.0-beta.1-windows-x64.zip -Algorithm SHA256
 ```
 
-Publish both files together when creating the GitHub pre-release tagged `v1.0.0-beta.1`, after the release checks. The checksum detects changed bytes; it is not a digital signature. Advance the prerelease number for subsequent betas and increase the build number for each distributed build. Do not replace an already published artifact under the same version. Tool/package downloads need Internet during development setup; normal use does not.
+The [first public beta](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1) includes both files. For subsequent releases, publish the ZIP and its checksum together under the matching version tag after completing the release checks. The checksum detects changed bytes; it is not a digital signature. Advance the prerelease number for subsequent betas and increase the build number for each distributed build. Do not replace an already published artifact under the same version. Tool/package downloads need Internet during development setup; normal use does not.
 
 See [architecture](ARCHITECTURE.md) and [contributing](CONTRIBUTING.md). Code comments and primary Markdown use English. Human translations live under `docs/i18n/<language-code>/`; AGENTS.md remains one authoritative English document.

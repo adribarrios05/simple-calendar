@@ -1,6 +1,6 @@
 [English](../../../README.md) · Español
 
-Fuente: [README en inglés](../../../README.md). Revisado: 26 de octubre de 2026.
+Fuente: [README en inglés](../../../README.md). Revisado: 27 de octubre de 2026.
 
 # Simple Calendar
 
@@ -12,15 +12,17 @@ El código y la documentación originales utilizan la [licencia MIT](../../../LI
 
 La aplicación usa **inglés por defecto**, también al cargar preferencias antiguas sin idioma. Cambia a español desde **Settings → Language → Español**. La selección se guarda y viaja en las copias JSON; cambiar tema o disponibilidad la conserva. Los textos introducidos por el usuario no se traducen. Los nombres predefinidos sin renombrar se muestran en el idioma seleccionado, conservando IDs y datos originales.
 
-El proyecto prepara **1.0.0-beta.1** (compilación 1); todavía no se ha publicado ni enlaza una descarga. Antes de distribuirla, valida el ZIP final en Windows limpio y comprueba la compatibilidad de copias y actualizaciones. El repositorio contiene la aplicación, las instrucciones de compilación y la documentación pública para contribuir.
+La **1.0.0-beta.1** (compilación 1) está disponible como beta pública para Windows x64. El repositorio contiene la aplicación, las instrucciones de compilación y la documentación pública para contribuir.
+
+[Descargar ZIP para Windows x64](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip) · [Checksum SHA256](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip.sha256) · [Notas de la versión](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1)
 
 ## Instalar y abrir
 
-1. Extrae **todo** `dist/SimpleCalendar-1.0.0-beta.1-windows-x64.zip` en una carpeta permanente.
+1. Descarga el [ZIP para Windows x64](https://github.com/adribarrios05/simple-calendar/releases/download/v1.0.0-beta.1/SimpleCalendar-1.0.0-beta.1-windows-x64.zip) y extrae **todo su contenido** en una carpeta permanente.
 2. Abre `SimpleCalendar.exe`. Conserva juntos el ejecutable, sus DLL y la carpeta `data`.
 3. Puedes crear un acceso directo al ejecutable. No requiere Flutter, Visual Studio ni permisos de administrador para utilizarla.
 
-Destino: Windows 10/11 x64. La distribución incluye el runtime de Visual C++ junto a la aplicación. El ejecutable no está firmado; no se ha generado un instalador MSI/MSIX. La compilación y la prueba nativa se realizaron en Windows 11 con Visual Studio 2022. Queda por verificar la distribución en otro equipo Windows limpio.
+Destino: Windows 10/11 x64. La distribución incluye el runtime de Visual C++ junto a la aplicación. El ejecutable no está firmado; no se ha generado un instalador MSI/MSIX. La compilación y la prueba nativa se realizaron en Windows 11 con Visual Studio 2022. Comprueba las futuras versiones en Windows sin herramientas de desarrollo; compilar en el equipo de desarrollo no demuestra por sí solo esa compatibilidad.
 
 ## Uso
 
@@ -72,7 +74,7 @@ Exporta desde Configuración. Para restaurar, selecciona una copia JSON: se vali
 
 Las actividades flexibles automáticas permiten activar **Limitar horario de planificación**, con **No antes de** y **Terminar antes de** (por ejemplo, 09:00–14:00 del mismo día). Toda la duración debe caber en esa franja y en la disponibilidad diaria. Si no cabe, queda sin asignar y con un aviso. Las actividades existentes siguen sin límite propio hasta activarlo. Los bloques bloqueados o iniciados conservan su posición y muestran avisos si quedan fuera de la franja.
 
-Estas instrucciones describen el procedimiento de actualización portable. Se ha probado el ciclo de esquema/edición/cierre/reapertura con bases temporales; sigue pendiente validar la sustitución entre dos distribuciones reales en otro Windows.
+Estas instrucciones describen el procedimiento de actualización portable. Las pruebas automatizadas con bases temporales cubren esquema, edición, cierre y reapertura; repite también las comprobaciones de instalación y actualización entre distribuciones para cada futura versión.
 
 ### Si aparece un error de almacenamiento
 
@@ -135,9 +137,9 @@ Capturas de la interfaz real generadas con una base temporal y tareas ficticias.
 
 La beta incluye calendario local, tareas fijas/flexibles/manuales, recurrencias, etiquetas, subtareas, inglés/español y copias JSON. No incluye notificaciones, fechas límite, replanificación entre días, división en sesiones, varias franjas de disponibilidad ni sincronización. Estas funciones opcionales no bloquean la beta.
 
-El ZIP no está firmado: Windows puede advertir de un editor desconocido. No hay instalador ni actualizador automático y los datos no están cifrados. Antes de publicar quedan las pruebas en Windows limpio y de actualización entre distribuciones.
+El ZIP no está firmado: Windows puede advertir de un editor desconocido. No hay instalador ni actualizador automático y los datos no están cifrados. Exporta una copia antes de actualizar. Las funciones opcionales quedan fuera del alcance de esta beta.
 
-Cuando el repositorio sea público, utiliza su pestaña **Issues** para incidencias y propuestas. Incluye versión/compilación, Windows, pasos y resultados esperado/real. No adjuntes agendas, bases o copias personales; usa ejemplos ficticios y oculta información privada en capturas. El soporte es voluntario, sin plazo de respuesta garantizado.
+Utiliza [Issues](https://github.com/adribarrios05/simple-calendar/issues) para incidencias y propuestas. Incluye versión/compilación, Windows, pasos y resultados esperado/real. No adjuntes agendas, bases o copias personales; usa ejemplos ficticios y oculta información privada en capturas. El soporte es voluntario, sin plazo de respuesta garantizado.
 
 ## Versión y checksum
 
@@ -147,7 +149,7 @@ El script lee `pubspec.yaml` y genera el ZIP anterior junto a `SimpleCalendar-1.
 Get-FileHash .\SimpleCalendar-1.0.0-beta.1-windows-x64.zip -Algorithm SHA256
 ```
 
-`-SkipBuild` comprueba que la versión del ejecutable coincida con `pubspec.yaml`; esto no demuestra que proceda del código actual. Recompila para publicar. No se garantiza reproducibilidad byte a byte. Publica ambos archivos en la pre-release `v1.0.0-beta.1` tras completar las comprobaciones. El checksum no es una firma digital. Aumenta el número de beta y compilación en nuevas distribuciones; no reemplaces archivos ya publicados bajo la misma versión.
+`-SkipBuild` comprueba que la versión del ejecutable coincida con `pubspec.yaml`; esto no demuestra que proceda del código actual. Recompila para publicar. No se garantiza reproducibilidad byte a byte. La [primera beta pública](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1) incluye ambos archivos. En futuras versiones, publica el ZIP y su checksum bajo la etiqueta correspondiente tras completar las comprobaciones. El checksum no es una firma digital. Aumenta el número de beta y compilación en nuevas distribuciones; no reemplaces archivos ya publicados bajo la misma versión.
 
 ## Nombre del proyecto
 

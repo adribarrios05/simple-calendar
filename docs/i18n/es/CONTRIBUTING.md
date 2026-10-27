@@ -2,9 +2,9 @@
 
 [English](../../../CONTRIBUTING.md) · Español
 
-Fuente: [CONTRIBUTING.md](../../../CONTRIBUTING.md). Revisado: 25 de octubre de 2026. La versión inglesa es la referencia normativa.
+Fuente: [CONTRIBUTING.md](../../../CONTRIBUTING.md). Revisado: 27 de octubre de 2026. La versión inglesa es la referencia normativa.
 
-El proyecto prepara su primera beta. El código y la documentación originales utilizan la [licencia MIT](../../../LICENSE.md). El repositorio todavía no se ha publicado; el flujo previsto de incidencias y contribuciones se explica al final.
+Simple Calendar es un proyecto público con una [beta para Windows disponible](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1). El código y la documentación originales utilizan la [licencia MIT](../../../LICENSE.md).
 
 Al enviar una contribución original para incorporarla a Simple Calendar, aceptas ofrecerla bajo MIT. Envía únicamente trabajo propio o que tengas derecho a aportar. Identifica el código y los recursos de terceros y conserva sus avisos y condiciones; consulta los [componentes de terceros](../../../THIRD_PARTY_NOTICES.md). Cada contribuyente conserva sus derechos de autor; no se exige una cesión de copyright.
 
@@ -34,4 +34,4 @@ Mantén un único AGENTS.md normativo en inglés: duplicarlo en subcarpetas intr
 
 ## Incidencias y contribuciones
 
-Al abrir el repositorio, utiliza **Issues** para errores y propuestas. Busca incidencias existentes antes de crear una nueva. La plantilla pide versión/compilación de la app, Windows, pasos y resultado esperado/real. Usa datos ficticios y nunca adjuntes bases ni copias privadas. Para cambios mayores que una corrección pequeña, acuerda el alcance en una incidencia antes de preparar un pull request. El soporte es voluntario. Activar Issues en GitHub sigue siendo una acción pendiente del propietario.
+Utiliza [Issues](https://github.com/adribarrios05/simple-calendar/issues) para errores y propuestas. Busca incidencias existentes antes de crear una nueva. La plantilla pide versión/compilación de la app, Windows, pasos y resultado esperado/real. Usa datos ficticios y nunca adjuntes bases ni copias privadas. Para cambios mayores que una corrección pequeña, acuerda el alcance en una incidencia antes de preparar un pull request. El soporte es voluntario.

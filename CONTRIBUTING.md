@@ -2,11 +2,11 @@
 
 [English](CONTRIBUTING.md) · [Español](docs/i18n/es/CONTRIBUTING.md)
 
-The project is preparing `1.0.0-beta.1`. Original code and documentation use the [MIT License](LICENSE.md). The repository has not yet been published.
+Simple Calendar is a public project with a [Windows beta release](https://github.com/adribarrios05/simple-calendar/releases/tag/v1.0.0-beta.1). Original code and documentation use the [MIT License](LICENSE.md).
 
 ## Issues and pull requests
 
-When the repository is public, use its Issues tab for bug reports and feature proposals. The bug-report template asks for app/build and Windows versions, reproduction steps and expected/actual behavior. Search existing issues first. Use synthetic examples, redact images and never attach private databases or backups. For changes beyond small fixes, discuss scope in an issue before preparing a focused pull request. Include checks actually executed. Support is best effort; no response deadline is promised. Enabling Issues in the eventual GitHub repository remains an owner action.
+Use [Issues](https://github.com/adribarrios05/simple-calendar/issues) for bug reports and feature proposals. The bug-report template asks for app/build and Windows versions, reproduction steps and expected/actual behavior. Search existing issues first. Use synthetic examples, redact images and never attach private databases or backups. For changes beyond small fixes, discuss scope in an issue before preparing a focused pull request. Include checks actually executed. Support is best effort; no response deadline is promised.
 
 By submitting an original contribution for inclusion in Simple Calendar, you agree to license it under MIT. Submit only work you authored or have sufficient rights to contribute. Identify third-party code/assets and preserve their original notices and terms; see [third-party components](THIRD_PARTY_NOTICES.md). Contributors retain copyright in their work; no copyright assignment is required.
 
