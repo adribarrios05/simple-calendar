@@ -28,6 +28,20 @@ The ZIP is unsigned and has no installer or automatic updater. Windows may show 
 
 Use [Issues](https://github.com/adribarrios05/simple-calendar/issues) for bugs and suggestions; it is the intended support channel, with no guaranteed response time. Include `1.0.0-beta.1` (build `1`), Windows version, steps to reproduce, and expected/actual behavior. Use fictional task names and redact screenshots. Do not upload your database, personal calendar or real backup. See [contributing](CONTRIBUTING.md).
 
+## Contributions welcome
+
+Simple Calendar is a small personal project, and contributions are welcome.
+
+You can help by:
+- Trying the Windows beta and reporting reproducible problems.
+- Improving English or Spanish wording.
+- Improving documentation or proposing small usability changes.
+
+See [open issues](https://github.com/adribarrios05/simple-calendar/issues)
+and the [contribution guide](CONTRIBUTING.md).
+
+For larger changes, please open an issue first to discuss the scope.
+
 ## Languages
 
 English is the default, including when older preferences have no language field. Choose **Settings → Language → Español** to switch to Spanish. The choice is saved locally and included in JSON backups. Theme and availability changes preserve it.
